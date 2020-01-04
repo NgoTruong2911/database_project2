@@ -14,7 +14,7 @@ class CreateOrdersTable extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->string('id');
             $table->unsignedBigInteger('place_of_shipment_id');
             $table->foreign('place_of_shipment_id')->references('id')->on('place_of_shipments');
 
